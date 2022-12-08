@@ -3,40 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="HyperNeRF handles topological variations by modeling a family of shapes in a higher-dimensional space, thereby producing more realistic renderings and more accurate geometric reconstructions.">
+  <meta name="keywords" content="HyperNeRF, Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <meta property="og:image" content="./static/images/thumbnail.png"/>
+  <link rel="image_src" href="./static/images/thumbnail.png">
+  <link rel="icon"
+        type="image/x-icon"
+        href="./static/images/favicon.ico"/>
+
+  <title>HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance
+    Fields</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+  gtag('config', 'G-EDF010G6PN');
 
-    gtag('js', new Date());
 
-    gtag('config', 'G-PYVRSFMDRL');
   </script>
+
+  <script type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css"/>
+
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
@@ -85,42 +97,82 @@
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container">
       <div class="columns is-centered">
+        <div class="column is-4 has-text-centered">
+          <img src="static/images/logo.svg" alt="HyperNeRF"/>
+        </div>
+      </div>
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title">
+          A Higher-Dimensional Representation<br/>for Topologically Varying Neural Radiance Fields
+        </h1>
+        <div class="is-size-5 publication-authors">
+          <div class="author-block">
+            <div class="author-portrait">
+              <img src="./static/images/portraits/keunhong_rgb.128.gif" class="rgb preload" />
+              <img src="./static/images/portraits/keunhong_depth.128.gif" class="depth preload" />
+            </div>
+            <a href="https://keunhong.com">Keunhong Park</a><sup>1,2</sup></div>
+          <div class="author-block">
+            <div class="author-portrait">
+              <img src="./static/images/portraits/utsinh_rgb.128.gif" class="rgb preload" />
+              <img src="./static/images/portraits/utsinh_depth.128.gif" class="depth preload" />
+            </div>
+            <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup></div>
+          <div class="author-block">
+            <div class="author-portrait">
+              <img src="./static/images/portraits/hedman_rgb.128.gif" class="rgb preload" />
+              <img src="./static/images/portraits/hedman_depth.128.gif" class="depth preload" />
+            </div>
+            <a href="https://phogzone.com/">Peter Hedman</a><sup>2</sup></div>
+          <div class="author-block">
+            <div class="author-portrait">
+              <img src="./static/images/portraits/barron_rgb.128.gif" class="rgb preload" />
+              <img src="./static/images/portraits/barron_depth.128.gif" class="depth preload" />
+            </div>
+            <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>
+          </div>
+          <div class="author-block">
+            <div class="author-portrait">
+              <img src="./static/images/portraits/sofien_rgb.128.gif" class="rgb preload" />
+              <img src="./static/images/portraits/sofien_depth.128.gif" class="depth preload" />
+            </div>
+            <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>
+          </div>
+          <div class="author-block">
+            <div class="author-portrait">
+              <img src="./static/images/portraits/dgo_rgb.128.gif" class="rgb preload" />
+              <img src="./static/images/portraits/dgo_depth.128.gif" class="depth preload" />
+            </div>
+            <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>
+          </div>
+          <div class="author-block">
+            <div class="author-portrait">
+              <img src="./static/images/portraits/rmbrualla_rgb.128.gif" class="rgb preload" />
+              <img src="./static/images/portraits/rmbrualla_depth.128.gif" class="depth preload" />
+            </div>
+            <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+          </div>
+          <div class="author-block">
+            <div class="author-portrait">
+              <img src="./static/images/portraits/smseitz_rgb.128.gif" class="rgb preload" />
+              <img src="./static/images/portraits/smseitz_depth.128.gif" class="depth preload" />
+            </div>
+            <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>
+          </div>
+        </div>
+
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><sup>1</sup>University of Washington,</span>
+          <span class="author-block"><sup>2</sup>Google Research</span>
+        </div>
+
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+          <div class="publication-links">
+            <!-- PDF Link. -->
+            <span class="link-block">
+                <a href="https://arxiv.org/pdf/2106.13228.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -128,46 +180,34 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+            <span class="link-block">
+                <a href="https://arxiv.org/abs/2106.13228"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
+            </span>
+            <span class="link-block">
+              <a href="https://github.com/google/hypernerf"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span>
+            <!-- Dataset Link. -->
+            <span class="link-block">
+              <a href="https://github.com/google/hypernerf/releases/tag/v0.1"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="far fa-images"></i>
+                </span>
+                <span>Data</span>
                 </a>
               </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-            </div>
-
           </div>
         </div>
       </div>
@@ -176,73 +216,104 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <video id="teaser" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/images/teaser.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <i>HyperNeRF</i> handles topological variations by modeling a
+        family of shapes in a higher-dimensional space, thereby producing more realistic renderings
+        and more accurate geometric reconstructions.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<section class="hero is-dark is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container has-text-centered">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
+
+        <div>
+          <div class="results-item">
+            <video poster="" id="espresso-rgb" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/espresso_rgb.mp4"
+                      type="video/mp4">
+            </video>
+            <video poster="" id="espresso-depth" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/espresso_depth.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
+
+        <div>
+          <div class="results-item">
+            <video poster="" id="split-cookie-rgb" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/split-cookie_rgb.mp4"
+                      type="video/mp4">
+            </video>
+            <video poster="" id="split-cookie-depth" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/split-cookie_depth.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
+
+        <div>
+          <div class="results-item">
+            <video poster="" id="3dprinter-rgb" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/3dprinter_rgb.mp4"
+                      type="video/mp4">
+            </video>
+            <video poster="" id="3dprinter-depth" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/3dprinter_depth.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
+
+        <div>
+          <div class="results-item">
+            <video poster="" id="ricardo-rgb" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/ricardo_rgb.mp4"
+                      type="video/mp4">
+            </video>
+            <video poster="" id="ricardo-depth" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/ricardo_depth.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
+
+        <div>
+          <div class="results-item">
+            <video poster="" id="americano-rgb" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/americano_rgb.mp4"
+                      type="video/mp4">
+            </video>
+            <video poster="" id="americano-depth" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/americano_depth.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
+
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-three-quarters">
+          <p>
+            Here we show results generated with <i>HyperNeRF</i>. These videos show the input video
+            being
+            played
+            back with a stabilized novel camera path. The right side video shows the depth of the
+            scene.
+            Click on the arrows or drag to see more results.
+          </p>
         </div>
       </div>
     </div>
@@ -252,37 +323,33 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Neural Radiance Fields (NeRF) are able to reconstruct scenes with unprecedented
+            fidelity,
+            and various recent works have extended NeRF to handle dynamic scenes. A common approach
+            to reconstruct such non-rigid scenes is through the use of a learned deformation field
+            mapping from coordinates in each input image into a canonical template coordinate space.
+            However, these deformation-based approaches struggle to model changes in topology, as
+            topological changes require a discontinuity in the deformation field, but these
+            deformation fields are necessarily continuous.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We address this limitation by lifting
+            NeRFs into a higher dimensional space, and by representing the 5D radiance field
+            corresponding to each individual input image as a slice through this "hyper-space". Our
+            method is inspired by level set methods, which model the evolution of surfaces as slices
+            through a higher dimensional surface. We evaluate our method on two tasks: (i)
+            interpolating smoothly between "moments", i.e., configurations of the scene, seen in the
+            input images while maintaining visual plausibility, and (ii) novel-view synthesis at
+            fixed moments. We show that our method, which we dub HyperNeRF, outperforms existing
+            methods on both tasks. Compared to Nerfies, <i>HyperNeRF</i> reduces average error rates by
+            4.1% for interpolation and 8.6% for novel-view synthesis, as measured by LPIPS.
           </p>
         </div>
       </div>
@@ -292,10 +359,12 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-2">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe width="640" height="480" src="https://www.youtube.com/embed/qzgdE_ghkaI"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -303,153 +372,167 @@
   </div>
 </section>
 
+<hr/>
 
 <section class="section">
   <div class="container is-max-desktop">
-
+    <h2 class="title is-3">Motivation</h2>
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
+      <!-- Level Sets. -->
+      <div class="column is-half">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
+          <h3 class="title is-4">Level-Set Methods</h3>
+          <div class="level-set has-text-justified">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              HyperNeRF represents changes in scene topology by providing a
+              NeRF with a higher-dimensional input. This is inspired by level-set methods.
+              Level-set methods provide a means to model a family of topologically-varying shapes as
+              slices of a higher dimensional auxiliary function. For example, these shapes
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
+            <div class="level-set-shapes">
+              <img src="./static/figures/level_set/0.svg"/>
+              <img src="./static/figures/level_set/1.svg"/>
+              <img src="./static/figures/level_set/2.svg"/>
             </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
+            <p>
+              can be represented as slices through this auxiliary shape
+            </p>
+            <model-viewer class="level-set-slices"
+                          src="./static/figures/level_set/level_set_3d.glb"
+                          alt="Slices through a 3D ambient surface."
+                          environment-image="neutral" auto-rotate camera-controls></model-viewer>
+            <p>
+              We can naturally model topologically varying shapes by just moving the
+              slicing plane along the higher dimensions. For example, this animation was generated
+              by
+              moving the slicing plane from top to bottom:
+            </p>
+            <div class="has-text-centered">
+              <video class="level-set-interpolate" controls autoplay loop playsinline muted height="100%">
+                <source src="./static/figures/level_set/interpolate2.mp4" type="video/mp4">
+              </video>
+            </div>
           </div>
-          <div class="column is-3 has-text-centered">
-            <img src="https://homes.cs.washington.edu/~kpar/nerfies/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
+      <!--/ Level Sets. -->
+
+      <div class="column is-half">
+        <div class="content has-text-justified">
+          <h3 class="is-4">Slicing Surfaces</h3>
+          <p>
+            Consider the follow shapes, which have different permutations of O xand X.
+          </p>
+          <div class="level-set-ox-shapes">
+            <img src="./static/figures/level_set/ox/0.svg"/>
+            <img src="./static/figures/level_set/ox/1.svg"/>
+            <img src="./static/figures/level_set/ox/2.svg"/>
+            <img src="./static/figures/level_set/ox/3.svg"/>
+          </div>
+          <p>
+            Traditionally, level-set methods use straight planes to slice the higher-dimensional
+            surface:
+          </p>
+          <model-viewer class="level-set-slices"
+                        src="./static/figures/level_set/ox/ox_ap.glb"
+                        alt="Slices through a 3D ambient surface."
+                        environment-image="neutral" auto-rotate camera-controls></model-viewer>
+          <p>
+            This means the higher-dimensional shape must contain copies of the same shape since
+            each permutation has to lie along a single straight slice through the z-axis. If we let
+            the slicing plane bend, it results in a much cleaner template:
+          </p>
+          <model-viewer class="level-set-slices"
+                        src="./static/figures/level_set/ox/ox_ds.glb"
+                        alt="Slices through a 3D ambient surface."
+                        environment-image="neutral" auto-rotate camera-controls></model-viewer>
+          <p>Please see the paper for details.</p>
+        </div>
+      </div>
+
     </div>
-    <!--/ Animation. -->
+  </div>
 
 
-    <!-- Concurrent Work. -->
+  <div class="container is-max-desktop">
+    <div class="content has-text-justified">
+      <h2 class="title is-3">HyperNeRF</h2>
+      <p>
+        The HyperNeRF architecture is a straightforward extension to Nerfies. The key difference is
+        that the template NeRF is conditioned on additional higher-dimensional coordinates, where
+        the higher dimensional coordinates are given by an "ambient slicing surface" which can be
+        thought of as a higher dimensional analog to the deformation field.
+      </p>
+      <div class="has-text-centered">
+        <img style="width: 90%;" src="./static/figures/architecture.svg"
+             alt="HyperNeRF architecture."/>
+      </div>
+      <h3 class="title is-4">Hyper-Space Template</h3>
+      <p>
+        HyperNeRF leverages main idea of level set methods by using a template NeRF which lives in
+        higher dimensions. In addition to the spatial coordinates (X, Y, Z), the NeRF MLP takes
+        additional higher dimensional coordinates W<sub>1</sub> and W<sub>2</sub>. We call these
+        the "ambient dimensions".
+      </p>
+      <p>
+        Here is an interactive viewer for the hyper-space of capture shown in the teaser. Drag the
+        <span style="color: #29e">blue cursor</span> around to change the ambient dimension rendered
+        on the right.
+      </p>
+    </div>
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+      <div class="column is-half">
+        <div class="hyper-space-wrapper has-text-centered">
+          <div class="hyper-space-axis">
+            <div class="hyper-space">
+              <div class="hyper-space-cursor"></div>
+            </div>
+          </div>
+          Ambient Dimension Coordinates
+          <br/>
+          <small>(Background shows log density of coordinate)</small>
         </div>
       </div>
+      <div class="column is-half has-text-centered">
+        <div class="hyper-grid-wrapper">
+          <div class="hyper-grid-rgb">
+            <img src="./static/figures/hyper_grid.jpg"/>
+          </div>
+        </div>
+        The hyper-space template rendered from a fixed viewpoint.
+      </div>
     </div>
-    <!--/ Concurrent Work. -->
+  </div>
+</section>
 
+<hr/>
+
+<section class="section" id="BibTeX">
+  <div class="container content is-max-desktop">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021hypernerf,
+  author = {Park, Keunhong and Sinha, Utkarsh and Hedman, Peter and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Martin-Brualla, Ricardo and Seitz, Steven M.},
+  title = {HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields},
+  journal = {ACM Trans. Graph.},
+  issue_date = {December 2021},
+  publisher = {ACM},
+  volume = {40},
+  number = {6},
+  month = {dec},
+  year = {2021},
+  articleno = {238},
+}</code></pre>
   </div>
 </section>
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+<section class="section" id="acknowledgements">
+  <div class="container content is-max-desktop">
+    <h2 class="title">Acknowledgements</h2>
+    <p>Special thanks to <a href="https://homes.cs.washington.edu/~holynski/">Aleksander Hołyński</a>,
+      <a href="https://roxanneluo.github.io/">Xuan Luo</a>, and Haley Cho for their support and
+      help with collecting data. Thanks to <a href="https://zhengqili.github.io/">Zhengqi Li</a> and
+      <a href="http://www.oliverwang.info/">Oliver Wang</a> for their help with the NSFF experiments.</p>
   </div>
 </section>
 
@@ -457,34 +540,16 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+      <a class="icon-link" href="https://arxiv.org/pdf/2106.13228.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 </footer>
 
+<script type="text/javascript" src="./static/slick/slick.min.js"></script>
 </body>
 </html>

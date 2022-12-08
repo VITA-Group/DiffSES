@@ -13,8 +13,29 @@ body {
     margin-bottom: 5px;
 }
 
-.dnerf {
+.is-smallcaps {
   font-variant: small-caps;
+}
+
+
+.author-block {
+  display: inline-block;
+}
+
+.author-portrait {
+  overflow: hidden;
+  width: 128px;
+  height: 128px;
+  font-size: 0;
+  margin: auto;
+}
+.author-portrait img {
+    border-radius: 50%;
+    width: 140px;
+    position: relative;
+}
+
+.author-portrait .depth {
 }
 
 
@@ -78,10 +99,6 @@ body {
     text-decoration: underline;
 }
 
-.author-block {
-  display: inline-block;
-}
-
 .publication-banner img {
 }
 
@@ -110,15 +127,24 @@ body {
 .publication-body img {
 }
 
+/*
 .results-carousel {
   overflow: hidden;
 }
+*/
 
-.results-carousel .item {
-  margin: 5px;
+.slick-prev {
+
+}
+
+.results-carousel > div {
+  text-align: center;
+}
+
+.results-carousel .results-item {
+  display: inline-block;
+  width: fit-content;
   overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
   padding: 0;
   font-size: 0;
 }
@@ -154,4 +180,86 @@ body {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+
+.level-set-slices {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #eee;
+  border-radius: 20px;
+}
+
+.level-set-shapes {
+  font-size: 0;
+  padding-left: 5%;
+}
+.level-set-shapes img {
+  width: 30%;
+}
+.level-set-interpolate {
+  width: 100%;
+}
+.level-set-ox-shapes img {
+  width: 24%;
+}
+
+.content model-viewer {
+ margin-bottom: 1em;
+}
+
+.hyper-space-wrapper {
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.hyper-space-axis {
+  padding: 5px;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.hyper-space {
+  width: 100%;
+  padding-bottom: calc(100% - 7%);
+  box_sizing: border-box;
+  touch-action: none;
+
+  background-image: url(../figures/hyper_log_prob.png);
+  background-size: contain;
+  border-radius: 10px;
+}
+
+.hyper-space-cursor {
+  width: 7%;
+  padding-bottom: calc(7% - 6px);
+  background: #29e;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.hyper-grid-wrapper{
+  width: 95%;
+  padding-bottom: 95%;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #29e;
+  position: relative;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.hyper-grid-rgb {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  position: absolute;
+}
+
+.hyper-grid-rgb img {
+  position: relative;
+  height: 2000%;
+  width: 2000%;
+  max-width: none !important;
 }
