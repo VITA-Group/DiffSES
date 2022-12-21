@@ -1,0 +1,47 @@
+[
+  {
+    "state": [
+      {
+        "type": 0,
+        "x_velocity": 2.4,
+        "y_velocity": -4.1,
+        "x_position": 23,
+        "y_position": 78
+      },
+      {
+        "type": 1,
+        "x_velocity": 8.9,
+        "y_velocity": -4.1,
+        "x_position": 23,
+        "y_position": 78
+      }
+    ],
+    "teacher_action": 2
+  },
+  {
+    "state": [
+      {
+        "type": 0,
+        "x_velocity": 6.4,
+        "y_velocity": 0.3,
+        "x_position": 94,
+        "y_position": 58
+      },
+      {
+        "type": 1,
+        "x_velocity": -3,
+        "y_velocity": 8.4,
+        "x_position": 93,
+        "y_position": 8
+      },
+      {
+        "type": 1,
+        "x_velocity": -3,
+        "y_velocity": 2.4,
+        "x_position": 99,
+        "y_position": 12
+      }
+    ],
+    "teacher_action": 1
+  }
+]
