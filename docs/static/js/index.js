@@ -87,3 +87,9 @@ function updateHyperGrid(point) {
   $('.hyper-grid-rgb > img').css('left', -left + '%');
   $('.hyper-grid-rgb > img').css('top', -top + '%');
 }
+
+// const videoContainer = document.getElementById('video-container');
+// const video = document.getElementById('teaser');
+
+// videoContainer.style.width = `${video.videoWidth}px`;
+// videoContainer.style.height = `${video.videoHeight}px`;

@@ -12,11 +12,10 @@
         type="image/x-icon"
         href="./static/images/favicon.ico"/>
 
-  <title>HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance
-    Fields</title>
+  <title>Symbolic Visual Reinforcement Learning: \\ A Scalable Framework with Object-Level Abstraction and Differentiable Expression Search</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
+<!--   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -25,8 +24,8 @@
   gtag('config', 'G-EDF010G6PN');
 
 
-  </script>
-
+  </script> -->
+<!-- 
   <script type="module"
           src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
@@ -34,7 +33,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
-
+ -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
@@ -51,9 +50,12 @@
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-</head>
-<body>
 
+</head>
+
+
+<body>
+<!-- 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -93,86 +95,92 @@
 
   </div>
 </nav>
+ -->
+
+
+<style>
+@font-face {
+  font-family: 'Symbola';
+  src: url('fonts/symbola.otf') format('opentype');
+}
+</style>
+
 
 
 <section class="hero">
   <div class="hero-body">
     <div class="container">
-      <div class="columns is-centered">
+      <!-- <div class="columns is-centered">
         <div class="column is-4 has-text-centered">
           <img src="static/images/logo.svg" alt="HyperNeRF"/>
         </div>
-      </div>
+      </div> -->
       <div class="container has-text-centered">
         <h1 class="title is-1 publication-title">
-          A Higher-Dimensional Representation<br/>for Topologically Varying Neural Radiance Fields
+          Symbolic Visual Reinforcement Learning: <br/> A Scalable Framework with Object-Level Abstraction <br/> and Differentiable Expression Search
         </h1>
         <div class="is-size-5 publication-authors">
+
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/keunhong_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/keunhong_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://keunhong.com">Keunhong Park</a><sup>1,2</sup></div>
+            <!-- <div class="author-portrait"> -->
+              <!-- <img src="./static/images/portraits/keunhong_rgb.128.gif" class="rgb preload" /> -->
+              <!-- <img src="./static/images/portraits/keunhong_depth.128.gif" class="depth preload" /> -->
+            <!-- </div> -->
+            <a href="http://wenqing-zheng.github.io">Wenqing Zheng </a><sup>*</sup></div>,
+
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/utsinh_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/utsinh_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup></div>
+            <!-- <div class="author-portrait"> -->
+              <!-- <img src="./static/images/portraits/utsinh_rgb.128.gif" class="rgb preload" /> -->
+              <!-- <img src="./static/images/portraits/utsinh_depth.128.gif" class="depth preload" /> -->
+            <!-- </div> -->
+            <a href="https://github.com/Syzygianinfern0">S P Sharan</a><sup>*</sup></div>,
+          
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/hedman_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/hedman_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://phogzone.com/">Peter Hedman</a><sup>2</sup></div>
+            <!-- <div class="author-portrait"> -->
+              <!-- <img src="./static/images/portraits/hedman_rgb.128.gif" class="rgb preload" /> -->
+              <!-- <img src="./static/images/portraits/hedman_depth.128.gif" class="depth preload" /> -->
+            <!-- </div> -->
+            <a href="https://zhiwenfan.github.io">Zhiwen Fan </a>,
+          </div>
+          
           <div class="author-block">
             <div class="author-portrait">
               <img src="./static/images/portraits/barron_rgb.128.gif" class="rgb preload" />
               <img src="./static/images/portraits/barron_depth.128.gif" class="depth preload" />
             </div>
-            <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>
+            <!-- <a href="https://jonbarron.info">Kevin Wang</a><sup>2</sup> -->
+            <!-- Kevin Wang -->
+            <a >Kevin Wang</a>,
           </div>
+          
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/sofien_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/sofien_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>
+            <!-- <div class="author-portrait"> -->
+              <!-- <img src="./static/images/portraits/sofien_rgb.128.gif" class="rgb preload" /> -->
+              <!-- <img src="./static/images/portraits/sofien_depth.128.gif" class="depth preload" /> -->
+            <!-- </div> -->
+            <a >Yihan Xi </a>,
           </div>
+          
           <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/dgo_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/dgo_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>
+            <!-- <div class="author-portrait"> -->
+              <!-- <img src="./static/images/portraits/dgo_rgb.128.gif" class="rgb preload" /> -->
+              <!-- <img src="./static/images/portraits/dgo_depth.128.gif" class="depth preload" /> -->
+            <!-- </div> -->
+            <a href="https://www.ece.utexas.edu/people/faculty/atlas-wang"> Atlas Wang </a>
           </div>
-          <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/rmbrualla_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/rmbrualla_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-          </div>
-          <div class="author-block">
-            <div class="author-portrait">
-              <img src="./static/images/portraits/smseitz_rgb.128.gif" class="rgb preload" />
-              <img src="./static/images/portraits/smseitz_depth.128.gif" class="depth preload" />
-            </div>
-            <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>
-          </div>
+          
         </div>
 
         <div class="is-size-5 publication-authors">
-          <span class="author-block"><sup>1</sup>University of Washington,</span>
-          <span class="author-block"><sup>2</sup>Google Research</span>
+          <span class="author-block">The University of Texas At Austin</span><br/>
+          <span class="author-block"><sup>*</sup>Equal Contribution</span>
         </div>
 
         <div class="column has-text-centered">
           <div class="publication-links">
             <!-- PDF Link. -->
             <span class="link-block">
-                <a href="https://arxiv.org/pdf/2106.13228.pdf"
+                <a href="https://arxiv.org/pdf/pending-symrel-arxiv-paper"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -181,7 +189,7 @@
                 </a>
               </span>
             <span class="link-block">
-                <a href="https://arxiv.org/abs/2106.13228"
+                <a href="https://arxiv.org/abs/pending-symrel-arxiv-paper"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -190,7 +198,7 @@
                 </a>
             </span>
             <span class="link-block">
-              <a href="https://github.com/google/hypernerf"
+              <a href="https://github.com/pending-symrel-code"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fab fa-github"></i>
@@ -199,7 +207,7 @@
                 </a>
             </span>
             <!-- Dataset Link. -->
-            <span class="link-block">
+<!--             <span class="link-block">
               <a href="https://github.com/google/hypernerf/releases/tag/v0.1"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
@@ -207,7 +215,7 @@
                 </span>
                 <span>Data</span>
                 </a>
-              </span>
+              </span> -->
           </div>
         </div>
       </div>
@@ -215,203 +223,224 @@
   </div>
 </section>
 
+
+
+
+  <!-- <div class="columns is-centered has-text-centered"> -->
+  <div class="container is-max-desktop">
+    <center>
+    <h2 class="title is-3">Overview</h2>
+            <br>
+    </center>
+    <div class="content has-text-justified">
+      <p>
+        This paper presents <b>DiffSES</b>, a framework that learns and generates symbolic policies for a visual environment. An example of symbolic policy generated for the <i>Pong-Atari2600</i> environment is shown below:
+      </p>
+
+      <div class="has-text-centered">
+        <img style="width: 90%;" src="./static/figures/symbolic-policy-pong.pdf"
+             alt="Demo symbolic tree"/>      
+      </div>
+
+      <p>
+         The generated symbolic policy takes the form of a forest of N<sub>action</sub> symbolic trees (above is one such tree, the other trees take similar structures), each tree corresponds to one action, whose execution value represents the probability for this action (pre-normalization), same as the neural networks based agents.
+      </p>
+      <p>
+        The DiffSES is developed from object level abstraction of the scene, rather than raw pixel level, or higher level of text planning as previous works did. It uses an unsupervised object detection module to discover objects in the current frame, and learn/search symbolic expressions to discover meaningful objects and features. 
+      </p>
+      <p>
+        In this way, the inputs to the learned symbolic expression are object features. The leaf nodes X<sub>0</sub>, X<sub>1</sub>, ... are the relabeled objects' positions and velocities. Such symbolic expressions offer potential explanability of the controlling policy: some subtrees might happen to constitute geometrically interpretable meanings.
+        For example, the geometric features (leaf nodes) X<sub>0</sub>, X<sub>1</sub>, ... could be  x<sub>pong</sub>, x<sub>racket</sub>, y<sub>pong</sub>, v<sub>y,pong</sub>, the x/y location of the pong and the racket, and vertical velocity of the pong. Then one subtree might appear as: y<sub>pong</sub> + v<sub>y, pong</sub> * (x<sub>racket</sub> - x<sub>pong</sub>)*c. This could mean the y axis of the aiming point of the pong on the racket, where c is some constant to convert the horizontal distance into time gap. The aiming point is where the racket should ultimately go to. If such sub-expressions are found, it could hint that similar logic is learned.
+      </p>
+      <p>
+        The inference procedure of the learned symbolic policy is shown in the figure below.
+      </p>
+
+
+      <div class="has-text-centered">
+        <img style="width: 60%;" src="./static/figures/flow-1.png"
+             alt="Demo symbolic tree"/>      
+      </div>
+      <br>
+
+
+  </div>
+</section>
+
+
 <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <center>
+    <h2 class="title is-3">Symbolic Agent Behavior Illustrations</h2>
+    </center>
+  </div>
+            <br>
+            <br>
+
+    <center>
+      
+      We mainly compared in these environments.
+            <br>
+            <br>
+
+      <div class="has-text-centered">
+        <img style="width: 80%;" src="./static/figures/teaser-1.png"
+             alt="Demo symbolic tree"/>      
+      </div>
+            <br>
+      Some observations are shown the videos below.
+            <br>
+            <br>
+    </center>
+
+
+
+
   <div class="hero-body">
     <div class="container is-max-desktop">
       <video id="teaser" autoplay controls muted loop playsinline height="100%">
-        <source src="./static/images/teaser.mp4"
+        <source src="./static/videos/video-2-compressed.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <i>HyperNeRF</i> handles topological variations by modeling a
-        family of shapes in a higher-dimensional space, thereby producing more realistic renderings
-        and more accurate geometric reconstructions.
+        This video illustrates the behaviors of the <i>neural network agent</i>, which is based on CNN and trained via PPO, and the learned <i>symbolic policy</i>, which is initialized by the PPO agent. The video displays three example environments, and the action distribution is diplayed at the bottom. 
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-dark is-small">
+
+
+<section class="hero is-dark">
   <div class="hero-body">
     <div class="container has-text-centered">
       <div id="results-carousel" class="carousel results-carousel">
 
-        <div>
+        <!-- <div> -->
           <div class="results-item">
-            <video poster="" id="espresso-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/espresso_rgb.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="espresso-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/espresso_depth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
 
-        <div>
-          <div class="results-item">
-            <video poster="" id="split-cookie-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/split-cookie_rgb.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="split-cookie-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/split-cookie_depth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
 
-        <div>
-          <div class="results-item">
-            <video poster="" id="3dprinter-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/3dprinter_rgb.mp4"
+            <video poster="" id="split-cookie-rgb" autoplay controls muted loop playsinline height="800px" width="600px">
+              <source src="./static/videos/video-3-compressed.mp4"
                       type="video/mp4">
             </video>
-            <video poster="" id="3dprinter-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/3dprinter_depth.mp4"
-                      type="video/mp4">
-            </video>
+            <!-- <video poster="" id="split-cookie-depth" autoplay controls muted loop playsinline height="100%"> -->
+              <!-- <source src="./static/videos/split-cookie_depth.mp4" -->
+                      <!-- type="video/mp4"> -->
+            <!-- </video> -->
           </div>
-        </div>
-
-        <div>
-          <div class="results-item">
-            <video poster="" id="ricardo-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/ricardo_rgb.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="ricardo-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/ricardo_depth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-        <div>
-          <div class="results-item">
-            <video poster="" id="americano-rgb" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/americano_rgb.mp4"
-                      type="video/mp4">
-            </video>
-            <video poster="" id="americano-depth" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/americano_depth.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
+        <!-- </div> -->
 
       </div>
 
       <div class="columns is-centered has-text-centered">
         <div class="column is-three-quarters">
           <p>
-            Here we show results generated with <i>HyperNeRF</i>. These videos show the input video
-            being
-            played
-            back with a stabilized novel camera path. The right side video shows the depth of the
-            scene.
-            Click on the arrows or drag to see more results.
+            Here is the comparison of the models in a transfer learning setting. In this setting, the teacher DRL model is trained in AdventureIsland3, and the symbolic agent is learned based on it. Then both agents are applied to AdventureIsland2 without fine-tuning. The performance of the symbolic policy drops less than DRL model.
           </p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
 
+
+
+<!-- 
+<section class="hero vid3">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3">Abstract</h2>
+      111111  2222222
+
+      <h2 class="subtitle has-text-centered">
+        <i>desc3333</i>
+      </h2>
+    </div>
+  </div>
+</section>
+ -->
+
+
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
-
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Neural Radiance Fields (NeRF) are able to reconstruct scenes with unprecedented
-            fidelity,
-            and various recent works have extended NeRF to handle dynamic scenes. A common approach
-            to reconstruct such non-rigid scenes is through the use of a learned deformation field
-            mapping from coordinates in each input image into a canonical template coordinate space.
-            However, these deformation-based approaches struggle to model changes in topology, as
-            topological changes require a discontinuity in the deformation field, but these
-            deformation fields are necessarily continuous.
+Learning efficient and interpretable policies has been a challenging task in reinforcement learning (RL), particularly in the visual RL setting with complex scenes. While deep neural networks have achieved competitive performance, the resulting policies are often over-parameterized black boxes that are difficult to interpret and deploy efficiently. More recent symbolic RL frameworks have shown that high-level domain-specific programming logic can be designed to handle both policy learning and symbolic planning. However, these approaches often rely on human-coded primitives with little feature learning, and when applied to high-dimensional continuous conversations such as visual scenes, they can suffer from scalability issues and perform poorly when images have complicated compositions and object interactions.
           </p>
           <p>
-            We address this limitation by lifting
-            NeRFs into a higher dimensional space, and by representing the 5D radiance field
-            corresponding to each individual input image as a slice through this "hyper-space". Our
-            method is inspired by level set methods, which model the evolution of surfaces as slices
-            through a higher dimensional surface. We evaluate our method on two tasks: (i)
-            interpolating smoothly between "moments", i.e., configurations of the scene, seen in the
-            input images while maintaining visual plausibility, and (ii) novel-view synthesis at
-            fixed moments. We show that our method, which we dub HyperNeRF, outperforms existing
-            methods on both tasks. Compared to Nerfies, <i>HyperNeRF</i> reduces average error rates by
-            4.1% for interpolation and 8.6% for novel-view synthesis, as measured by LPIPS.
+To address these challenges, we propose <i>Differentiable Symbolic Expression Search</i> (DiffSES), a novel symbolic learning approach that discovers discrete symbolic policies using partially differentiable optimization. By using object-level abstractions instead of raw pixel-level inputs, DiffSES is able to leverage the simplicity and scalability advantages of symbolic expressions, while also incorporating the strengths of neural networks for feature learning and optimization.
+Our experiments demonstrate that DiffSES is able to generate symbolic policies that are more interpretable and scalable than state-of-the-art symbolic RL methods, even with a reduced amount of symbolic prior knowledge.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-2">Video</h2>
-        <div class="publication-video">
-          <iframe width="640" height="480" src="https://www.youtube.com/embed/qzgdE_ghkaI"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
 <hr/>
 
+
+<!-- 
+!!!!!!!!!!!!!!!!
+
+tree demo
+
+grid
+  Motivation
+    improve symbolic based visual RL
+  Method: learn, distillation, fine tune
+
+video1: distribution
+video2: transfer
+
+Abstract
+
+Results
+  Comparison: (table)
+  imperfect OD
+
+
+
+
+-->
+
+
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Motivation</h2>
+    <center>
+      <h2 class="title is-3">Method</h2>
+                  <br>
+                  <br>
+    </center>
     <div class="columns is-centered">
       <!-- Level Sets. -->
       <div class="column is-half">
         <div class="content">
-          <h3 class="title is-4">Level-Set Methods</h3>
+          <h3 class="title is-4">Motivations</h3>
           <div class="level-set has-text-justified">
             <p>
-              HyperNeRF represents changes in scene topology by providing a
-              NeRF with a higher-dimensional input. This is inspired by level-set methods.
-              Level-set methods provide a means to model a family of topologically-varying shapes as
-              slices of a higher dimensional auxiliary function. For example, these shapes
+              Symbolic expressions demonstrate simplicity and effectiveness compared with over-parameterized DRL model. Previous works on symbolic RL either fail to scale to complex visual scenes, or use pixel level inputs to directly evolve symbolic expressions, which are often over-complex and require carefully curated operator set. 
             </p>
-            <div class="level-set-shapes">
-              <img src="./static/figures/level_set/0.svg"/>
-              <img src="./static/figures/level_set/1.svg"/>
-              <img src="./static/figures/level_set/2.svg"/>
-            </div>
             <p>
-              can be represented as slices through this auxiliary shape
+              We assume that object level abstraction could generate simpler policies than pixel level methods. To discover object information in new scenes with minimum human interference, we adopt an unsupervised object detection module.
             </p>
-            <model-viewer class="level-set-slices"
-                          src="./static/figures/level_set/level_set_3d.glb"
-                          alt="Slices through a 3D ambient surface."
-                          environment-image="neutral" auto-rotate camera-controls></model-viewer>
             <p>
-              We can naturally model topologically varying shapes by just moving the
-              slicing plane along the higher dimensions. For example, this animation was generated
-              by
-              moving the slicing plane from top to bottom:
+              Furthermode, to make the symbolic expression search procedure more flexible, we introduce differentiable search in the vanilla genetic programming with neural network guidance.
             </p>
-            <div class="has-text-centered">
-              <video class="level-set-interpolate" controls autoplay loop playsinline muted height="100%">
-                <source src="./static/figures/level_set/interpolate2.mp4" type="video/mp4">
-              </video>
-            </div>
+
           </div>
         </div>
       </div>
@@ -419,34 +448,18 @@
 
       <div class="column is-half">
         <div class="content has-text-justified">
-          <h3 class="is-4">Slicing Surfaces</h3>
+          <h3 class="is-4">Learning steps</h3>
           <p>
-            Consider the follow shapes, which have different permutations of O xand X.
-          </p>
-          <div class="level-set-ox-shapes">
-            <img src="./static/figures/level_set/ox/0.svg"/>
-            <img src="./static/figures/level_set/ox/1.svg"/>
-            <img src="./static/figures/level_set/ox/2.svg"/>
-            <img src="./static/figures/level_set/ox/3.svg"/>
-          </div>
+            The symbolic policy consists of the unsupervised object detection module and the 
+            We employ symbolic knowledge distillation followed by fine-tuning. The pipline consists of three steps.
           <p>
-            Traditionally, level-set methods use straight planes to slice the higher-dimensional
-            surface:
-          </p>
-          <model-viewer class="level-set-slices"
-                        src="./static/figures/level_set/ox/ox_ap.glb"
-                        alt="Slices through a 3D ambient surface."
-                        environment-image="neutral" auto-rotate camera-controls></model-viewer>
+            <b>Step I</b>: A traditional CNN based DRL agent in trained using PPO.
           <p>
-            This means the higher-dimensional shape must contain copies of the same shape since
-            each permutation has to lie along a single straight slice through the z-axis. If we let
-            the slicing plane bend, it results in a much cleaner template:
+            <b>Step II</b>: The DRL model is distilled into symbolic expressions using genetic programming based symbolic regression. 
+          <p>
+            <b>Step III</b>: The symbolic expressions are fine-tuned with the proposed neural guided search which integrates gradient descent into genetic programming mutation procedure for symbolic expressions.
           </p>
-          <model-viewer class="level-set-slices"
-                        src="./static/figures/level_set/ox/ox_ds.glb"
-                        alt="Slices through a 3D ambient surface."
-                        environment-image="neutral" auto-rotate camera-controls></model-viewer>
-          <p>Please see the paper for details.</p>
+
         </div>
       </div>
 
@@ -454,65 +467,59 @@
   </div>
 
 
-  <div class="container is-max-desktop">
-    <div class="content has-text-justified">
-      <h2 class="title is-3">HyperNeRF</h2>
-      <p>
-        The HyperNeRF architecture is a straightforward extension to Nerfies. The key difference is
-        that the template NeRF is conditioned on additional higher-dimensional coordinates, where
-        the higher dimensional coordinates are given by an "ambient slicing surface" which can be
-        thought of as a higher dimensional analog to the deformation field.
-      </p>
+
+<hr/>
+
+
+
+
+
+
+
+
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div id="results-carousel" class="carousel results-carousel">
+
+    <center>
+    <h2 class="title is-3">Compatible Environments</h2>
+
       <div class="has-text-centered">
-        <img style="width: 90%;" src="./static/figures/architecture.svg"
-             alt="HyperNeRF architecture."/>
+        <img style="width: 100%;" src="./static/figures/doables.png"
+             alt="Demo symbolic tree"/>      
       </div>
-      <h3 class="title is-4">Hyper-Space Template</h3>
-      <p>
-        HyperNeRF leverages main idea of level set methods by using a template NeRF which lives in
-        higher dimensions. In addition to the spatial coordinates (X, Y, Z), the NeRF MLP takes
-        additional higher dimensional coordinates W<sub>1</sub> and W<sub>2</sub>. We call these
-        the "ambient dimensions".
-      </p>
-      <p>
-        Here is an interactive viewer for the hyper-space of capture shown in the teaser. Drag the
-        <span style="color: #29e">blue cursor</span> around to change the ambient dimension rendered
-        on the right.
-      </p>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <div class="hyper-space-wrapper has-text-centered">
-          <div class="hyper-space-axis">
-            <div class="hyper-space">
-              <div class="hyper-space-cursor"></div>
-            </div>
-          </div>
-          Ambient Dimension Coordinates
-          <br/>
-          <small>(Background shows log density of coordinate)</small>
+    </center>
+
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-three-quarters">
+          <p>
+            Here is a subset of environments we found the proposed DiffSES is compatible with. To effectively control in these environments, it require handling geometric relationships beween objects and the protagonist. These relationships can usually be expressed as straight lines intersections, which is what symbolic expressions are good at.
+          </p>
         </div>
       </div>
-      <div class="column is-half has-text-centered">
-        <div class="hyper-grid-wrapper">
-          <div class="hyper-grid-rgb">
-            <img src="./static/figures/hyper_grid.jpg"/>
-          </div>
-        </div>
-        The hyper-space template rendered from a fixed viewpoint.
-      </div>
+
     </div>
   </div>
 </section>
 
-<hr/>
+
+
+
+
+
 
 <section class="section" id="BibTeX">
   <div class="container content is-max-desktop">
+        <center>
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021hypernerf,
-  author = {Park, Keunhong and Sinha, Utkarsh and Hedman, Peter and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Martin-Brualla, Ricardo and Seitz, Steven M.},
-  title = {HyperNeRF: A Higher-Dimensional Representation for Topologically Varying Neural Radiance Fields},
+      </center>
+    <pre><code>
+   <!--    @article{park2021hypernerf,
+  author = {pending !!!!!!!!!},
+  title = {pending title},
   journal = {ACM Trans. Graph.},
   issue_date = {December 2021},
   publisher = {ACM},
@@ -521,11 +528,13 @@
   month = {dec},
   year = {2021},
   articleno = {238},
-}</code></pre>
+  } -->
+  Comming soon.
+</code></pre>
   </div>
 </section>
 
-
+<!-- 
 <section class="section" id="acknowledgements">
   <div class="container content is-max-desktop">
     <h2 class="title">Acknowledgements</h2>
@@ -534,8 +543,8 @@
       help with collecting data. Thanks to <a href="https://zhengqili.github.io/">Zhengqi Li</a> and
       <a href="http://www.oliverwang.info/">Oliver Wang</a> for their help with the NSFF experiments.</p>
   </div>
-</section>
-
+</section> -->
+<!-- 
 
 <footer class="footer">
   <div class="container">
@@ -548,8 +557,9 @@
       </a>
     </div>
   </div>
-</footer>
+</footer> -->
 
 <script type="text/javascript" src="./static/slick/slick.min.js"></script>
 </body>
 </html>
+

@@ -3,6 +3,18 @@ body {
 }
 
 
+#video/*-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#vid3 {
+  position: absolute;
+  top: -5px; 
+  left: -5px;
+}*/
+
+
 .footer .icon-link {
     font-size: 25px;
     color: #000;
