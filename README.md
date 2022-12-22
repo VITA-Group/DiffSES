@@ -1,4 +1,29 @@
-# DiffSES
+<div align="center">
+
+# Symbolic Visual Reinforcement Learning: A Scalable Framework with Object-Level Abstraction and Differentiable Expression Search
+
+**[Wenqing Zheng](http://wenqing-zheng.github.io)\*, [S P Sharan](https://github.com/Syzygianinfern0)\*, [Zhiwen Fan](https://zhiwenfan.github.io), [Kevin Wang](), [Yihan Xi](), [Atlas Wang](https://www.ece.utexas.edu/people/faculty/atlas-wang)**
+
+<!-- **Accepted at [NeurIPS 2022](https://neurips.cc/virtual/2022/poster/54408)** -->
+
+| **[ [```Arxiv```](https://vita-group.github.io) ]** | **[ [```Website```](https://vita-group.github.io/DiffSES) ]**
+|:-------------------:|:-------------------:|
+
+<!-- <img src="assets/symbolicpcc.jpg" width="768"> -->
+
+</div>
+
+---
+
+# Introduction
+
+Learning efficient and interpretable policies has been a challenging task in reinforcement learning (RL), particularly in the visual RL setting with complex scenes. While deep neural networks have achieved competitive performance, the resulting policies are often over-parameterized black boxes that are difficult to interpret and deploy efficiently. More recent symbolic RL frameworks have shown that high-level domain-specific programming logic can be designed to handle both policy learning and symbolic planning. However, these approaches often rely on human-coded primitives with little feature learning, and when applied to high-dimensional continuous conversations such as visual scenes, they can suffer from scalability issues and perform poorly when images have complicated compositions and object interactions.
+To address these challenges, we propose Differentiable Symbolic Expression Search (DiffSES), a novel symbolic learning approach that discovers discrete symbolic policies using partially differentiable optimization. By using object-level abstractions instead of raw pixel-level inputs, DiffSES is able to leverage the simplicity and scalability advantages of symbolic expressions, while also incorporating the strengths of neural networks for feature learning and optimization.
+Our experiments demonstrate that DiffSES is able to generate symbolic policies that are more interpretable and scalable than state-of-the-art symbolic RL methods, even with a reduced amount of symbolic prior knowledge. 
+
+---
+
+# Usage
 
 ## Stage I - Neural Policy Learning
 
@@ -91,3 +116,22 @@ While running that file, please run a `pip install -e .` inside the custom imple
 local version instead of the prebuilt wheels from PyPi. Similar to [Part 2.3](#part-c--symbolic-distillation), we
 recommend running this experiment numerous times to achieve
 acceptable levels of convergence.
+
+## Citation
+
+If you find our code implementation helpful for your own research or work, please cite our paper.
+
+```bibtex
+@inproceedings{
+  Coming Soon!
+}
+```
+
+# Contact
+
+For any queries, please [raise an issue](https://github.com/VITA-Group/DiffSES/issues/new) or
+contact [Wenqing Zheng](mailto:w.zheng@utexas.edu).
+
+# License
+
+This project is open sourced under [MIT License](LICENSE).
