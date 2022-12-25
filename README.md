@@ -71,9 +71,8 @@ without fine-tuning. The performance of the symbolic policy drops less than DRL 
 <table>
 <tr>
 <td>
-<video src="docs/static/videos/video-3-compressed.mp4" controls="controls" style="max-width: 768px;">
+<video src="https://user-images.githubusercontent.com/31875325/209475899-301e7ace-cc24-4ad9-8aa5-c83950d5d1e8.mp4">
 </video>
-
 </td>
 </tr>
 <tr>
