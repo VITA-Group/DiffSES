@@ -2,14 +2,14 @@
 
 # Symbolic Visual Reinforcement Learning: A Scalable Framework with Object-Level Abstraction and Differentiable Expression Search
 
-**[Wenqing Zheng](http://wenqing-zheng.github.io)\*, [S P Sharan](https://github.com/Syzygianinfern0)\*, [Zhiwen Fan](https://zhiwenfan.github.io), [Kevin Wang](), [Yihan Xi](), [Atlas Wang](https://www.ece.utexas.edu/people/faculty/atlas-wang)**
+** [Wenqing Zheng](http://wenqing-zheng.github.io)\*, [S P Sharan](https://github.com/Syzygianinfern0)\*, [Zhiwen Fan](https://zhiwenfan.github.io), [Kevin Wang](), [Yihan Xi](), [Atlas Wang](https://www.ece.utexas.edu/people/faculty/atlas-wang) **
 
 <!-- **Accepted at [NeurIPS 2022](https://neurips.cc/virtual/2022/poster/54408)** -->
 
-| **[ [```Arxiv```](https://vita-group.github.io) ]** | **[ [```Website```](https://vita-group.github.io/DiffSES) ]**
-|:-------------------:|:-------------------:|
+| **[ [```Website```](https://vita-group.github.io/DiffSES) ]** |
+|:-------------------------------------------------------------:|
 
-<!-- <img src="assets/symbolicpcc.jpg" width="768"> -->
+<img src="docs/static/figures/v2demo1.png" width="768">
 
 </div>
 
@@ -17,9 +17,88 @@
 
 # Introduction
 
-Learning efficient and interpretable policies has been a challenging task in reinforcement learning (RL), particularly in the visual RL setting with complex scenes. While deep neural networks have achieved competitive performance, the resulting policies are often over-parameterized black boxes that are difficult to interpret and deploy efficiently. More recent symbolic RL frameworks have shown that high-level domain-specific programming logic can be designed to handle both policy learning and symbolic planning. However, these approaches often rely on human-coded primitives with little feature learning, and when applied to high-dimensional continuous conversations such as visual scenes, they can suffer from scalability issues and perform poorly when images have complicated compositions and object interactions.
-To address these challenges, we propose Differentiable Symbolic Expression Search (DiffSES), a novel symbolic learning approach that discovers discrete symbolic policies using partially differentiable optimization. By using object-level abstractions instead of raw pixel-level inputs, DiffSES is able to leverage the simplicity and scalability advantages of symbolic expressions, while also incorporating the strengths of neural networks for feature learning and optimization.
-Our experiments demonstrate that DiffSES is able to generate symbolic policies that are more interpretable and scalable than state-of-the-art symbolic RL methods, even with a reduced amount of symbolic prior knowledge. 
+Learning efficient and interpretable policies has been a challenging task in reinforcement learning (RL), particularly
+in the visual RL setting with complex scenes. While deep neural networks have achieved competitive performance, the
+resulting policies are often over-parameterized black boxes that are difficult to interpret and deploy efficiently. More
+recent symbolic RL frameworks have shown that high-level domain-specific programming logic can be designed to handle
+both policy learning and symbolic planning. However, these approaches often rely on human-coded primitives with little
+feature learning, and when applied to high-dimensional continuous conversations such as visual scenes, they can suffer
+from scalability issues and perform poorly when images have complicated compositions and object interactions.
+To address these challenges, we propose Differentiable Symbolic Expression Search (DiffSES), a novel symbolic learning
+approach that discovers discrete symbolic policies using partially differentiable optimization. By using object-level
+abstractions instead of raw pixel-level inputs, DiffSES is able to leverage the simplicity and scalability advantages of
+symbolic expressions, while also incorporating the strengths of neural networks for feature learning and optimization.
+Our experiments demonstrate that DiffSES is able to generate symbolic policies that are more interpretable and scalable
+than state-of-the-art symbolic RL methods, even with a reduced amount of symbolic prior knowledge.
+
+<div align="center">
+<table>
+<tr>
+<td>
+<img src="docs/static/figures/flow-1.png" width="768">
+</td>
+</tr>
+<tr>
+<th>
+Inference procedure of the learned symbolic policy
+</th>
+</tr>
+</table>
+</div>
+
+# Results
+
+<div align="center">
+<table>
+<tr>
+<td>
+<img src="docs/static/figures/teaser-1.png" width="768">
+</td>
+</tr>
+<tr>
+<th>
+A subset of our trained environments
+</th>
+</tr>
+</table>
+</div>
+
+Here is the comparison of the models in a transfer learning setting. In this setting, the teacher DRL model is trained
+in AdventureIsland3, and the symbolic agent is learned based on it. Then both agents are applied to AdventureIsland2
+without fine-tuning. The performance of the symbolic policy drops less than DRL model.
+
+<div align="center">
+<table>
+<tr>
+<td>
+<video width="768" controls>
+<source src="docs/static/videos/video-3-compressed.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</td>
+</tr>
+<tr>
+<th>
+Symbolic policies enable ease of transfer owing to the disentanglement of control policies and feature extraction steps.
+</th>
+</tr>
+</table>
+</div>
+
+<div align="center">
+<table>
+<tr>
+<td>
+<img src="docs/static/figures/symbolic-policy-pong.png" width="768">
+</td>
+</tr>
+<tr>
+<th>
+Visualization of a trained DiffSES policy
+</th>
+</tr>
+</table>
+</div>
 
 ---
 
