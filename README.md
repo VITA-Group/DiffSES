@@ -71,10 +71,9 @@ without fine-tuning. The performance of the symbolic policy drops less than DRL 
 <table>
 <tr>
 <td>
-<video width="768" controls>
-<source src="docs/static/videos/video-3-compressed.mp4" type="video/mp4">
-Your browser does not support the video tag.
+<video src="docs/static/videos/video-3-compressed.mp4" controls="controls" style="max-width: 768px;">
 </video>
+
 </td>
 </tr>
 <tr>
