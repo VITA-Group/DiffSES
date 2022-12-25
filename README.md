@@ -2,7 +2,7 @@
 
 # Symbolic Visual Reinforcement Learning: A Scalable Framework with Object-Level Abstraction and Differentiable Expression Search
 
-** [Wenqing Zheng](http://wenqing-zheng.github.io)\*, [S P Sharan](https://github.com/Syzygianinfern0)\*, [Zhiwen Fan](https://zhiwenfan.github.io), [Kevin Wang](), [Yihan Xi](), [Atlas Wang](https://www.ece.utexas.edu/people/faculty/atlas-wang) **
+**[Wenqing Zheng](http://wenqing-zheng.github.io)\*, [S P Sharan](https://github.com/Syzygianinfern0)\*, [Zhiwen Fan](https://zhiwenfan.github.io), [Kevin Wang](), [Yihan Xi](), [Atlas Wang](https://www.ece.utexas.edu/people/faculty/atlas-wang)**
 
 <!-- **Accepted at [NeurIPS 2022](https://neurips.cc/virtual/2022/poster/54408)** -->
 
