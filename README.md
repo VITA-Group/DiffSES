@@ -7,8 +7,7 @@
 <!-- **Accepted at [NeurIPS 2022](https://neurips.cc/virtual/2022/poster/54408)** -->
 
 | [```Website```](https://vita-group.github.io/DiffSES) | [```Arxiv```](https://arxiv.org/abs/2212.14849) |
-
-:-------------------------------------------------------------:|
+:------------------------------------------------------:|:-----------------------------------------------:|
 
 <img src="docs/static/figures/v2demo1.png" width="768">
 
