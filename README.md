@@ -199,8 +199,11 @@ acceptable levels of convergence.
 If you find our code implementation helpful for your own research or work, please cite our paper.
 
 ```bibtex
-@inproceedings{
-  Coming Soon!
+@article{zheng2022symbolic,
+  title={Symbolic Visual Reinforcement Learning: A Scalable Framework with Object-Level Abstraction and Differentiable Expression Search},
+  author={Zheng, Wenqing and Sharan, SP and Fan, Zhiwen and Wang, Kevin and Xi, Yihan and Wang, Zhangyang},
+  journal={arXiv preprint arXiv:2212.14849},
+  year={2022}
 }
 ```
 
